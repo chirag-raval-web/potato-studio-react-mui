@@ -2,7 +2,7 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/theme';
-import { Home, Services, Work, About, Blog, Career, Contact, Navbar,Footer,QuoteSection } from './components/import';
+import { Home, Services, Work, About, Blog, Career, Contact, Navbar,Footer,QuoteSection,StartProject } from './components/import';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
  
  
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <StartProject/>
         <Footer/>
       </Router>
  </ThemeProvider>

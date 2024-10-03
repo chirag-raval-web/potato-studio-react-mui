@@ -10,6 +10,9 @@ const theme = createTheme({
     },
     gray:{
       main: '#B0B0B0',
+    },
+    common:{
+      main: '#000',
     }
   },
   typography: {
@@ -24,7 +27,7 @@ const theme = createTheme({
       fontSize: '5.0rem',
       fontWeight: 600,
       lineHeight: '6.5rem',
-      letterSpacing: '-4%',
+      letterSpacing: '-0.04em',
       // textAlign: 'center',
       color:'#161616',
     },
@@ -59,7 +62,7 @@ const theme = createTheme({
       letterSpacing: '-0.04em',
     },
     h6: {
-      fontFamily: 'Inter Tight',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '1.375rem',
       fontWeight: 500,
       lineHeight: '1.925rem',
@@ -68,7 +71,7 @@ const theme = createTheme({
     body: {
       fontFamily: 'Inter',
       fontSize: '1.125rem',
-      fontWeight: 400,
+      fontWeight: 600,
       lineHeight: '1.8em',
       letterSpacing: '-0.03em',
   

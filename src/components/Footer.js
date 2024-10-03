@@ -148,7 +148,6 @@ const PrivacySection = () => {
           color="gray"
           sx={{
             ...flexBox("row", "4px"),
-            
             alignContent: "center",
           }}
         >
@@ -166,12 +165,13 @@ const Footer = () => {
     <Box
       sx={{
         background: "#522076",
-        m: 0, // Remove default margin
+        m: 0,  
         display: "flex",
         flexDirection: "column",
         maxHeight: "1440px",
         height: "auto",
-        padding: "140px 106px",
+        padding:{ xs: '40px 20px', sm: '60px 30px', md: '100px 70px', lg: '120px 90px', xl: '140px 106px' },
+
         gap: "104px",
       }}
     >

@@ -20,7 +20,7 @@ const QuoteApi = [
     },
     {
       id: 4,
-      page: "about",
+      page: "about-us",
       quote: "We believe in crafting delightful experiences",
       description: "Combining the problem solving skills of engineering with the creativity of design to solve UX challenges.",
     },

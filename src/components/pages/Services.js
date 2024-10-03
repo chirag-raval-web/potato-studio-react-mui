@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Faq from '../Faq'
+import { Box } from '@mui/material'
 const Services = () => {
   return (
-    <div>
-      
-    </div>
+    <Box>
+      <Faq/>
+    </Box>
   )
 }
 

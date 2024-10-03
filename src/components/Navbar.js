@@ -30,7 +30,7 @@ const NavMenu = ({flexDirection}) => {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6 ,xs:2}, flexDirection:flexDirection }}>
+    <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6 , xs:4}, flexDirection:flexDirection }}>
       {MenuItems.map((item, index) => (
         <Typography
           variant="linkLight"
@@ -138,16 +138,18 @@ const Navbar = () => {
 
   return (
     <AppBar
+
     position='sticky'
     
       sx={{
         padding: {
-          xs: "1.875rem  ",
+          xs: "1.875rem  0",
           sm: "1.875rem  0",
           md: "1.875rem 1.625rem",
           lg: "1.875rem 6.625rem",
           xl: "1.875rem 6.625rem",
         },
+        
         boxShadow: "none",
         borderBottom: 1,
         borderColor: "#E3E3E3",
