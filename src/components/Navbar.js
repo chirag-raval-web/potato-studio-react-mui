@@ -7,13 +7,9 @@ import {
   Button,
   IconButton,
   Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close"; // Close icon
+import CloseIcon from "@mui/icons-material/Close";  
 import { useMediaQuery } from "@mui/material";
 
 // Logo Component
@@ -22,7 +18,6 @@ const Logo = () => (
     <img src="media/logo/nav-logo.webp" alt="Logo" width={126} height={52} />
   </Box>
 );
-
 // NavMenu Component
 const NavMenu = ({flexDirection}) => {
   const location = useLocation(); // Get the current location
@@ -38,14 +33,17 @@ const NavMenu = ({flexDirection}) => {
     <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6 ,xs:2}, flexDirection:flexDirection }}>
       {MenuItems.map((item, index) => (
         <Typography
-          variant="body1"
+          variant="linkLight"
+          color="gray"
           component={Link}
           key={index}
           to={getUrl(item)}
           sx={{
-            cursor: "pointer",
-            textDecoration: "none",
-            color: location.pathname === getUrl(item) ? "black" : "gray", // Set color based on URL
+            color: location.pathname === getUrl(item) ? "black" : "gray", 
+           
+            '&:hover' :{
+              color: "black",
+            }
           }}
         >
           {item}
@@ -58,16 +56,11 @@ const ContactBtn = () => {
   return (
     <Button
       component={Link}
-      variant="contained"
+      variant="secondary" 
       to="/contact"
       disableRipple
-      sx={{
-        marginLeft: "20px",
-        backgroundColor: "#522076",
-        color: "#fff",
-      }}
-    >
-      Contact
+     >
+      <Typography variant="linkLight">Contact</Typography>
     </Button>
   );
 };
@@ -92,7 +85,6 @@ const CustomMenuButton = ({ onClick }) => {
     </IconButton>
   );
 };
-
 // MenuDrawer Component
 const MenuDrawer = () => {
   const [isOpen, setIsOpen] = useState(false); // State to control drawer
@@ -146,6 +138,8 @@ const Navbar = () => {
 
   return (
     <AppBar
+    position='sticky'
+    
       sx={{
         padding: {
           xs: "1.875rem  ",
@@ -154,13 +148,12 @@ const Navbar = () => {
           lg: "1.875rem 6.625rem",
           xl: "1.875rem 6.625rem",
         },
-        background: "white",
         boxShadow: "none",
         borderBottom: 1,
         borderColor: "#E3E3E3",
       }}
     >
-      <Toolbar sx={{ justifyContent: "space-between", color: "black" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo in Navbar */}
         <Logo />
 

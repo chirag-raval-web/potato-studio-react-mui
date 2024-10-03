@@ -1,84 +1,138 @@
-// theme.js
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
-// Custom theme with primary colors and typography settings
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#522076", // Your custom button color
+      main: '#FFFFFF', // Primary color
     },
     secondary: {
-      main: "#ff4081", // Example for a secondary color
+      main: '#522076', 
     },
-    text: {
-      primary: "#333", // Primary text color
-      secondary: "#777", // Secondary text color
-    },
-    // Add more color options as needed
+    gray:{
+      main: '#B0B0B0',
+    }
   },
   typography: {
-    fontFamily: "Inter, Arial, sans-serif", // Default font family
+    fontFamily: [
+      'Inter',
+      'Sora',
+      'Inter Tight',
+      'sans-serif'
+    ].join(','),
     h1: {
-      fontFamily: "Sora, sans-serif", // Big text uses Sora
-      fontSize: "2rem", // Adjust size as needed
-      fontWeight: 700, // Adjust weight as needed
-      color: "#522076", // Optional color for h1
+      fontFamily: 'Sora',
+      fontSize: '5.0rem',
+      fontWeight: 600,
+      lineHeight: '6.5rem',
+      letterSpacing: '-4%',
+      // textAlign: 'center',
+      color:'#161616',
     },
     h2: {
-      fontFamily: "Sora, sans-serif", // Big text uses Sora
-      fontSize: "1.5rem", // Adjust size as needed
+      fontFamily: 'Sora',
+      fontSize: '3.375rem',
       fontWeight: 600,
-      color: "#522076",
+      lineHeight: '4.3875rem',
+      letterSpacing: '-0.04em',
     },
-    body1: {
-      fontFamily: "Inter", // Small text uses Inter
-      fontSize: "1rem", // Adjust size as needed
+    h3: {
+      fontFamily: 'Sora',
+      fontSize: '2.6875rem',
+      fontWeight: 600,
+      lineHeight: '3.4937rem',
+      letterSpacing: '-0.04em',
+      textAlign: 'left',
+    },
+    h4: {
+      fontFamily: 'Sora',
+      fontSize: '2.1875rem',
+      fontWeight: 600,
+      lineHeight: '2.8438rem',
+      letterSpacing: '-0.04em',
+      textAlign: 'left',
+    },
+    h5: {
+      fontFamily: 'Sora',
+      fontSize: '1.625rem',
+      fontWeight: 600,
+      lineHeight: ' 2.1125rem',
+      letterSpacing: '-0.04em',
+    },
+    h6: {
+      fontFamily: 'Inter Tight',
+      fontSize: '1.375rem',
+      fontWeight: 500,
+      lineHeight: '1.925rem',
+      textAlign: 'left',
+    },
+    body: {
+      fontFamily: 'Inter',
+      fontSize: '1.125rem',
       fontWeight: 400,
-      "&:hover": {
-        color: "black", // Prevent underline on hover as well
-      },
+      lineHeight: '1.8em',
+      letterSpacing: '-0.03em',
+  
     },
-    body2: {
-      fontFamily: "Inter, sans-serif", // Small text uses Inter
-      fontSize: "0.875rem", // Adjust size as needed
-      color: "#777", // Optional color for secondary body text
-    },
-    // Link styles to remove underline
-    link: {
-      textTransform: "none", // Disable uppercase transformation for links
-      color: "#522076", // Link color
-      textDecoration: "none", // Remove underline
-      "&:hover": {
-        textDecoration: "none", // Prevent underline on hover as well
-      },
-    },
-    contact: {
-      fontFamily: "Inter, sans-serif", // Small text uses Inter
-      fontSize: "1rem", // Adjust size as needed
-      color: "#fff", // Optional color for secondary body text
-      fontWeight: 400,
-      "&:hover": {
-        color: "red", // Prevent underline on hover as well
-      },
+    linkLight: {
+      fontFamily: 'Inter',
+      fontSize: '1rem',
+      fontWeight: 500,
+      lineHeight: '1rem',
+      letterSpacing: '-0.03em',
+      textAlign: 'left',
+      cursor: "pointer",
+      textDecoration: "none",
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          padding: "16px 32px",
-          borderRadius: "100px",
-          backgroundColor: "#522076", 
-          transition: "background-color 0.3s ease, transform 0.1s ease",
-          color: "#fff",
-          "&:active": {
-            transform: "scale(0.95)", 
-            backgroundColor: '#522090', 
+          borderRadius: '100px',
+          '&:active': {
+            transform: 'scale(0.95)',
           },
+        },
+        primary: {
+          width: 'auto',
+          height: '56px',
+          padding: '1rem 26px 1rem 32px',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid #E3E3E3',
+          gap: '8px',
+        },
+        secondary: {
+          height: '56px',
+          padding: '1rem 32px',
+          backgroundColor: '#522076',
+          color:'white',
+          transition: 'background-color 0.3s ease, transform 0.1s ease',
+          gap: '6px',
         },
       },
     },
+  //   MuiDivider:{
+  //     styleOverrides: {
+  //     height: '1px',
+  //     bordercolor:'white',
+  //     backgroundcolor: '#ffffff',
+  //     margintop: '64px',
+  //   }
+  // }
   },
+  //not working
+  MuiBox: {
+    styleOverrides: {
+      mainBox: {
+        width: '100%',
+        maxHeight: '1440px',
+        height: 'auto',
+        padding: '140px 106px',
+        gap: '104px',
+      },
+    },
+  },
+
 });
 
 export default theme;
