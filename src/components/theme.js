@@ -13,6 +13,9 @@ const theme = createTheme({
     },
     common:{
       main: '#000',
+    },
+    black50:{
+      main:'#636363'
     }
   },
   typography: {
@@ -37,6 +40,7 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: '4.3875rem',
       letterSpacing: '-0.04em',
+      color:'#161618'
     },
     h3: {
       fontFamily: 'Sora',
@@ -64,14 +68,14 @@ const theme = createTheme({
     h6: {
       fontFamily: 'Inter, sans-serif',
       fontSize: '1.375rem',
-      fontWeight: 500,
+      fontWeight:600,
       lineHeight: '1.925rem',
       textAlign: 'left',
     },
     body: {
       fontFamily: 'Inter',
       fontSize: '1.125rem',
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: '1.8em',
       letterSpacing: '-0.03em',
   
@@ -86,6 +90,17 @@ const theme = createTheme({
       cursor: "pointer",
       textDecoration: "none",
     },
+    Aeonik:{
+      fontFamily: 'Aeonik, Arial, sans-serif',
+      fontSize: '16px', // Set the font size for body text
+      fontWeight:600,  // Font weight
+      lineHeight: '17.68px', // Set the line height
+      textAlign: 'left', // Default text alignment
+      border:'1px solid #E1E1E1',
+      padding:'10px',
+      textAlign:'center',
+      }
+ 
   },
   components: {
     MuiButton: {
@@ -114,6 +129,7 @@ const theme = createTheme({
         },
       },
     },
+ 
   //   MuiDivider:{
   //     styleOverrides: {
   //     height: '1px',
@@ -124,17 +140,17 @@ const theme = createTheme({
   // }
   },
   //not working
-  MuiBox: {
-    styleOverrides: {
-      mainBox: {
-        width: '100%',
-        maxHeight: '1440px',
-        height: 'auto',
-        padding: '140px 106px',
-        gap: '104px',
-      },
-    },
-  },
+  // MuiBox: {
+  //   styleOverrides: {
+  //     mainBox: {
+  //       width: '100%',
+  //       maxHeight: '1440px',
+  //       height: 'auto',
+  //       padding: '140px 106px',
+  //       gap: '104px',
+  //     },
+  //   },
+  // },
 
 });
 

@@ -15,11 +15,44 @@ import { useMediaQuery } from "@mui/material";
 // Logo Component
 const Logo = () => (
   <Box component={Link} to={"/"} sx={{ display: "flex", alignItems: "center" }}>
-    <img src="media/logo/nav-logo.webp" alt="Logo" width={126} height={52} />
+    <img src={`${process.env.PUBLIC_URL}/media/logo/nav-logo.webp`} alt="Logo" width={126} height={52} />
   </Box>
 );
 // NavMenu Component
-const NavMenu = ({flexDirection}) => {
+// const NavMenu = ({flexDirection}) => {
+//   const location = useLocation(); // Get the current location
+//   const MenuItems = ["Home", "Services", "Work", "About us", "Blog", "Career"];
+
+//   // Function to generate URLs dynamically
+//   const getUrl = (item) => {
+//     if (item === "Home") return "/";
+//     return `/${item.toLowerCase().replace(/\s+/g, "-")}`; // Replace spaces with hyphens for URL
+//   };
+
+//   return (
+//     <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6 , xs:4}, flexDirection:flexDirection }}>
+//       {MenuItems.map((item, index) => (
+//         <Typography
+//           variant="linkLight"
+//           color="gray"
+//           component={Link}
+//           key={index}
+//           to={getUrl(item)}
+//           sx={{
+//             color: location.pathname === getUrl(item) ? "black" : "gray", 
+           
+//             '&:hover' :{
+//               color: "black",
+//             }
+//           }}
+//         >
+//           {item}
+//         </Typography>
+//       ))}
+//     </Box>
+//   );
+// };
+const NavMenu = ({ flexDirection }) => {
   const location = useLocation(); // Get the current location
   const MenuItems = ["Home", "Services", "Work", "About us", "Blog", "Career"];
 
@@ -30,18 +63,17 @@ const NavMenu = ({flexDirection}) => {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6 , xs:4}, flexDirection:flexDirection }}>
+    <Box sx={{ display: "flex", gap: { md: 4, sm: 2, xl: 6, xs: 4 }, flexDirection: flexDirection }}>
       {MenuItems.map((item, index) => (
         <Typography
           variant="linkLight"
-          color="gray"
           component={Link}
           key={index}
+          color="gray"
           to={getUrl(item)}
           sx={{
-            color: location.pathname === getUrl(item) ? "black" : "gray", 
-           
-            '&:hover' :{
+            color: location.pathname === getUrl(item) || (item !== "Home" && location.pathname.startsWith(getUrl(item))) ? "black" : "gray",
+            '&:hover': {
               color: "black",
             }
           }}
@@ -52,6 +84,8 @@ const NavMenu = ({flexDirection}) => {
     </Box>
   );
 };
+
+
 const ContactBtn = () => {
   return (
     <Button

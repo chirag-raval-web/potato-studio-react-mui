@@ -9,6 +9,7 @@ import {
 import FaqApi from "./api/faqApi";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close"; // Don't forget to import CloseIcon
+import { SectionTitle } from "./otherSection";
 
 const Faq = () => {
   const [faqData] = useState(FaqApi);
@@ -20,9 +21,7 @@ const Faq = () => {
 
   return (
     <Box padding={{ xs: "60px 20px", sm: "80px 40px", md: "100px 60px", lg: "140px 80px", xl: "140px 106px" }} display="flex" flexDirection="column" gap={{ xs: "40px", sm: "60px", md: "80px", lg: "100px" }}>
-      <Typography display="flex" alignItems="center" variant="h3" color="initial">
-        <img src="media/smalll-icons/sectionArrow.webp" alt="sectionArrow" width="24px" /> FAQs
-      </Typography>
+      <SectionTitle title={'Faq'}/>
       <Box padding={{ xs: "0 20px", sm: "0 40px", md: "0 60px", lg: "0 80px" }}>
         {faqData.map((elm, index) => (
           <Accordion

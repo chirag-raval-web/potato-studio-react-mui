@@ -69,7 +69,7 @@ const FooterData = () => {
           order: isMobile ? 1 : 1
         }}
       >
-        <img src="media/logo/footer-logo.svg" alt="Footer Logo" width={200} />
+        <img src={`${process.env.PUBLIC_URL}/media/logo/footer-logo.svg`} alt="Footer Logo" width={200} />
         {!isMobile && <PrivacySection />}
       </Box>
 
@@ -135,8 +135,8 @@ const PrivacySection = () => {
   return (
     <Box sx={flexBox("column", "32px")}>
       <Box sx={flexBox("row", "30px")}>
-        {socialIcons.map((icon) => (
-          <img key={icon.alt} src={icon.src} alt={icon.alt} />
+        {socialIcons.map((icon,index) => (
+          <img key={index} src={icon.src} alt={icon.alt} />
         ))}
       </Box>
       <Box sx={flexBox("column", "8px")}>

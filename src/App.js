@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/theme';
 import { Home, Services, Work, About, Blog, Career, Contact, Navbar,Footer,QuoteSection,StartProject } from './components/import';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ServiceDetailedPage } from './components/pages/ServiceDetailedPage';
  
  
  
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetailedPage />} /> 
           <Route path="/work" element={<Work />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/blog" element={<Blog />} />
