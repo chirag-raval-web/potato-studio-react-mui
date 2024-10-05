@@ -38,8 +38,8 @@ const Engagement = () => {
                     Some of the client we are engaged with
                   </Typography>
                   <Grid container spacing={3}>
-                    {model.Logos.map((logos) => (
-                      <img src={logos.src} width={85.45} />
+                    {model.Logos.map((logos,index) => (
+                      <img key={index} src={logos.src} width={85.45} />
                     ))}
                   </Grid>
                 </Grid>

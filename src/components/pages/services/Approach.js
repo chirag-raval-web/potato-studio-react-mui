@@ -20,7 +20,7 @@ const Approach = () => {
     <Grid container spacing={3} padding={'0 40px'}>
         {
             ApproachData.map((apr,index)=>(
-                <Grid container direction={'column'} size={4} spacing={4} padding={'40px'}  key={index}>
+                <Grid container direction={'column'} size={isTab ? 12 : 4} spacing={4} padding={'40px'}  key={index}>
                     <Grid container direction={'column'} spacing={'64px'}>
                         <img src={apr.img} width={302.67} />
                         <Grid container direction={'column'} spacing={1} >
@@ -29,8 +29,8 @@ const Approach = () => {
                         </Grid>
                     </Grid>
                     <Grid container direction={'column'} spacing={3}>
-                        {apr.link.map((links)=>(
-                            <Typography variant="linkLight" component={Link} sx={{cursor:'default'}}  color="secondary">{links.text}</Typography>
+                        {apr.link.map((links,index)=>(
+                            <Typography  key={index} variant="linkLight" component={Link} sx={{cursor:'default'}}  color="secondary">{links.text}</Typography>
                         ))}
                     </Grid>
                 </Grid>

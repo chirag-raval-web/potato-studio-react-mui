@@ -50,9 +50,9 @@ const ViewWork = () => {
                 </Typography>
                 <Grid container spacing={"10px"}>
                   {work.workDone.map((task, i) => (
-                    <Box padding={"10px"} border={"1px solid #E3E3E3"}>
+                    <Box padding={"10px"} border={"1px solid #E3E3E3"} key={i}>
                       <Typography
-                        key={i}
+                        
                         variant="linkLight"
                         color="black50"
                         sx={{ cursor: "default" }}

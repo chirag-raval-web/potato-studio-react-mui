@@ -79,7 +79,7 @@ const TestimonialSlider = () => {
         >
           {/* -----------------------grid------------------------- */}
           {testimonialsData.map((testimonial, index) => (
-            <Grid container height={'433px'}     >
+            <Grid container height={'433px'}   key={index}  >
               <Grid container justifyContent={'space-between'} >
               <Grid container direction={'column'}    >
                 <img src="../media/smalll-icons/comma.webp" width={34} alt="" />
