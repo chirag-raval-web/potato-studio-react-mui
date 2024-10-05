@@ -104,9 +104,9 @@ export const ServicesItems = () => {
         {ServicesData.map((service, index) => {
           const serviceSlug = service.title
             .toLowerCase()
-            .replace(/[\/]/g, "-") // Replace slashes with hyphens
-            .replace(/ /g, "-") // Replace spaces with hyphens
-            .replace(/[^\w-]+/g, ""); // Remove any non-word characters
+            .replace(/[\/]/g, "-")  
+            .replace(/ /g, "-")  
+            .replace(/[^\w-]+/g, ""); 
 
           return (
             <Box

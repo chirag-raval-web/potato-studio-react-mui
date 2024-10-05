@@ -73,7 +73,7 @@ const theme = createTheme({
       textAlign: 'left',
     },
     body: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '1.125rem',
       fontWeight: 500,
       lineHeight: '1.8em',
@@ -83,7 +83,7 @@ const theme = createTheme({
     linkLight: {
       fontFamily: 'Inter',
       fontSize: '1rem',
-      fontWeight: 500,
+      fontWeight: 600,
       lineHeight: '1rem',
       letterSpacing: '-0.03em',
       textAlign: 'left',
@@ -129,28 +129,8 @@ const theme = createTheme({
         },
       },
     },
- 
-  //   MuiDivider:{
-  //     styleOverrides: {
-  //     height: '1px',
-  //     bordercolor:'white',
-  //     backgroundcolor: '#ffffff',
-  //     margintop: '64px',
-  //   }
-  // }
   },
-  //not working
-  // MuiBox: {
-  //   styleOverrides: {
-  //     mainBox: {
-  //       width: '100%',
-  //       maxHeight: '1440px',
-  //       height: 'auto',
-  //       padding: '140px 106px',
-  //       gap: '104px',
-  //     },
-  //   },
-  // },
+
 
 });
 
